@@ -1,0 +1,9 @@
+{
+    "name": "pronouns",
+    "title": "Pronouns",
+    "description": "Allows players to set and display their pronouns",
+    "author": "Kihira",
+    "version": "1.0.0",
+    "minimumCoreVersion": "0.5.0",
+    "scripts": [ "main.js" ]
+  }
