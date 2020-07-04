@@ -5,6 +5,7 @@
   "scripts": {
     "build": "npx tsc -p tsconfig.json",
     "lint": "npx eslint src/ --ext .ts",
+    "watch": "npx tsc --watch -p tsconfig.json",
     "update-foundry-types": "npm install --save-dev git+https://gitlab.com/foundry-projects/foundry-pc/foundry-pc-types.git"
   },
   "keywords": [
