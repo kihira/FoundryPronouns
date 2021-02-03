@@ -4,6 +4,8 @@
     "description": "Allows players to set and display their pronouns",
     "author": "Kihira",
     "version": "1.0.0",
-    "minimumCoreVersion": "0.5.0",
-    "scripts": [ "main.js" ]
+    "minimumCoreVersion": "0.6.4",
+    "scripts": [ "crystal-heart.js" ],
+    "styles": [ "styles/pronouns.css" ],
+    "system": "swade"
   }

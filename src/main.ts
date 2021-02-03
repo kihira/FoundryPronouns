@@ -15,12 +15,22 @@ Hooks.once('ready', async () =>
     console.log('FoundryPronouns: Ready');
 });
 
-Hooks.once('renderPlayerList', async (list: PlayerList, html: HTMLElement, options: RenderPlayerListHookOptions) =>
+Hooks.on('renderPlayerList', async (list: PlayerList, html: JQuery<HTMLElement>, options: RenderPlayerListHookOptions) =>
 {
-    
+    html.find('.player').each((id, player) =>
+    {
+        player.setAttribute('data-tooltip', 'they/them');
+        player.title = "they/them";
+        
+/*         const pronouns = document.createElement('span');
+        pronouns.classList.add('pronouns-player');
+        pronouns.innerHTML = "they/them";
+
+        player.append(pronouns); */
+    });
 });
 
-Hooks.once('getUserContextOptions', async (html: HTMLElement, options: UserContextOption[]) =>
+Hooks.on('getUserContextOptions', async (html: HTMLElement, options: UserContextOption[]) =>
 {
     options.push(
         {
@@ -30,4 +40,13 @@ Hooks.once('getUserContextOptions', async (html: HTMLElement, options: UserConte
             callback: (players: HTMLElement[]) => { console.log(players) },
         }
     );
+});
+
+/**
+ * When Player Configuration window is opened (Right click player -> Player Configuration)
+ */
+Hooks.on('renderPlayerConfig', async (config: PlayerConfig, html: JQuery<HTMLElement>, user: User) =>
+{
+    html.find('[name="avatar"]').parent().html("");
+    //html.find('[name="avatar"]').parent().after('<div class="form-group"><label>Player Pronouns</label><input type="text" name="pronouns" value="floof"></div>')
 });
