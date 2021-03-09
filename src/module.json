@@ -1,11 +1,11 @@
 {
-    "name": "pronouns",
+    "name": "foundrypronouns",
     "title": "Pronouns",
     "description": "Allows players to set and display their pronouns",
     "author": "Kihira",
     "version": "1.0.0",
-    "minimumCoreVersion": "0.6.4",
-    "scripts": [ "crystal-heart.js" ],
-    "styles": [ "styles/pronouns.css" ],
-    "system": "swade"
+    "minimumCoreVersion": "0.7.9",
+    "compatibleCoreVersion": "0.7.9",
+    "scripts": [ "main.js" ],
+    "styles": [ "styles/pronouns.css" ]
   }
