@@ -1,3 +1,10 @@
+interface RenderPlayerConfigHookOptions
+{
+    actors: Actor[],
+    options: Record<string, unknown>,
+    user: User,
+}
+
 interface RenderPlayerListHookOptions 
 {
     /**

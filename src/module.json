@@ -7,5 +7,13 @@
     "minimumCoreVersion": "0.7.9",
     "compatibleCoreVersion": "0.7.9",
     "scripts": [ "main.js" ],
-    "styles": [ "styles/pronouns.css" ]
+    "styles": [ "styles/pronouns.css" ],
+    "languages":
+    [
+      {
+        "lang": "en",
+        "name": "English",
+        "path": "lang/en.json"
+      }
+    ]
   }
